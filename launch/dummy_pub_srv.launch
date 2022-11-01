@@ -1,0 +1,4 @@
+<launch>
+  <param name="sleep_duration" type="double" value="0.1" />
+  <node pkg="ros_ci_test" type="dummy_pub_srv" name="dummy_pub_srv" output="screen"/>
+</launch>

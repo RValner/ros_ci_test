@@ -1,0 +1,6 @@
+<launch>
+  <include file="$(find ros_ci_test)/launch/dummy_pub_srv.launch"/>
+
+  <test test-name="dynamic_duration_test" pkg="ros_ci_test" type="dynamic_duration_test"/>
+
+</launch>

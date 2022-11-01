@@ -1,0 +1,16 @@
+<launch>
+  <include file="$(find ros_ci_test)/launch/dummy_pub_srv.launch"/>
+
+  <test pkg="rostest" type="paramtest" name="paramtest_nonempty" test-name="paramtest_nonempty">
+    <param name="param_name_target" value="sleep_duration" />
+    <param name="test_duration" value="2.0" />
+    <param name="wait_time" value="10.0" />
+  </test>
+
+  <param name="hztest1/topic" value="my_topic" />
+  <param name="hztest1/hz" value="10" />
+  <param name="hztest1/hzerror" value="1" />
+  <param name="hztest1/test_duration" value="4.0" />
+  <test test-name="hztest_test_1" pkg="rostest" type="hztest" name="hztest1" />
+
+</launch>
