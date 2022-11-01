@@ -29,8 +29,8 @@ bool serviceCb(ros_ci_test::SetDuration::Request& req, ros_ci_test::SetDuration:
 {
   std::lock_guard<std::mutex> l(sleep_duration_mutex);
   sleep_duration = req.duration;
-  res.duration = sleep_duration;
-  ROS_INFO_STREAM("set sleep duration to: " << sleep_duration << " s"); 
+   res.duration = sleep_duration;
+   ROS_INFO_STREAM("set sleep duration to: " << sleep_duration << " s");
   return true;
 }
 

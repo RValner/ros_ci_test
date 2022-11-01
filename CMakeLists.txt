@@ -6,6 +6,7 @@ find_package(catkin REQUIRED COMPONENTS
   message_generation
   roscpp
   roslint
+  rostest
   std_msgs
 )
 
@@ -31,7 +32,6 @@ CATKIN_DEPENDS
 
 # Compile the tests
 if(CATKIN_ENABLE_TESTING)
-  find_package(rostest REQUIRED)
 
   # Simple Hz test
   add_rostest(
