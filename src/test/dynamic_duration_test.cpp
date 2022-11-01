@@ -15,7 +15,7 @@
 #include "std_msgs/String.h"
 
 double avg_duration{ 0 };
-double new_duration{ 0.05 };
+double new_duration{ 0.01 };
 double rate_before;
 ros::Subscriber rate_sub;
 

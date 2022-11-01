@@ -31,7 +31,7 @@ bool serviceCb(ros_ci_test::SetDuration::Request& req, ros_ci_test::SetDuration:
   sleep_duration = req.duration;
   res.duration = sleep_duration;
   ROS_INFO_STREAM("set sleep duration to: " << sleep_duration << " s");
-  return true;
+  return tru
 }
 
 int main(int argc, char** argv)
