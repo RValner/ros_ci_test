@@ -1,6 +1,6 @@
 /**
  * @file dynamic_duration_test.cpp
- * @author your name (you@domain.com)
+ * @author Robert Valner
  * @brief
  * @version 0.1
  * @date 2022-11-01
@@ -15,7 +15,7 @@
 #include "std_msgs/String.h"
 
 double avg_duration{ 0 };
-double new_duration{ 0.01 };
+double new_duration{ 0.05 };
 double rate_before;
 ros::Subscriber rate_sub;
 
@@ -80,7 +80,7 @@ TEST(TestSuite, dynamic_rate_test)
   std::cerr << "rate_before: " << rate_before << " Hz, expected_rate: " << expected_rate
             << " Hz, current_rate: " << rate_after << std::endl;
 
-  EXPECT_TRUE((rate_after <= expected_rate + 1) || (rate_after >= expected_rate - 1))
+  EXPECT_TRUE((rate_after <= expected_rate + 1) && (rate_after >= expected_rate - 1))
       << "Expected " << expected_rate << " Hz but got " << rate_after << " Hz";
 }
 
