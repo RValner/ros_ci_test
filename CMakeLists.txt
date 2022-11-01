@@ -3,10 +3,10 @@ project(ros_ci_test)
 add_compile_options(-std=c++11)
 
 find_package(catkin REQUIRED COMPONENTS
-  roscpp
-  std_msgs
   message_generation
+  roscpp
   roslint
+  std_msgs
 )
 
 add_service_files(
@@ -22,7 +22,10 @@ generate_messages(
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES ros_ci_test
-CATKIN_DEPENDS roscpp rostest message_runtime
+CATKIN_DEPENDS 
+  message_runtime
+  roscpp rostest
+  std_msgs
 #  DEPENDS system_lib
 )
 
