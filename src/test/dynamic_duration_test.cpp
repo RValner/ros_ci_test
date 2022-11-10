@@ -57,7 +57,7 @@ TEST(TestSuite, service_call_test)
   if (scl.call(srv_msg))
   {
     // Check if the response is equal to the expected result
-    EXPECT_EQ(srv_msg.response.duration, expected_result)
+    EXPECT_EQ(srv_msg.response.duration, expected_result + 10)
         << "Expected " << expected_result << " but got " << srv_msg.response.duration;
   }
   else
